@@ -1,0 +1,311 @@
+{
+  "id": "bb5f614a-2eb2-47ff-99d4-5336cbf166ec",
+  "version": "2.0",
+  "name": "Mercury Tours Login page",
+  "url": "https://demo.guru99.com/test/newtours/login.php",
+  "tests": [{
+    "id": "39eac723-afed-492b-9862-e4d0c7ea2b57",
+    "name": "SEL000_Valid_credentials",
+    "commands": [{
+      "id": "546ef1d8-abc4-487b-88a3-b7697a5aad92",
+      "comment": "",
+      "command": "//Logging in with valid credentials and confirming the succesful login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfd2e008-7556-4024-8493-cdcfad082358",
+      "comment": "",
+      "command": "open",
+      "target": "/test/newtours/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a30def25-c78c-4d5c-a756-503ddc9fb208",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1792x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "906a9201-2de9-4c49-9098-5f2f77e6d0a1",
+      "comment": "",
+      "command": "type",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "user"
+    }, {
+      "id": "8645402c-8ce2-4f77-91a8-7e5ebd0853b9",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "e6b7a73d-519c-4ef4-afed-b17a44b1b7fe",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40e78f41-ba69-4083-9418-724aab457bb2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Login Successfully')]", "xpath:innerText"]
+      ],
+      "value": "Login Successfully"
+    }]
+  }, {
+    "id": "ddea6af7-bc7a-451e-a285-a4cc1c202486",
+    "name": "SEL002_Invalid_credentials",
+    "commands": [{
+      "id": "51f5b095-8e18-497c-b351-9d6eb627fb5f",
+      "comment": "",
+      "command": "//Entering pseudorandom credentials - should not login since such user does not exist",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4174f58b-0085-4995-8e45-c4531ce00563",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.guru99.com/test/newtours/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48506fed-58b0-48c3-a16b-8fffec72b185",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1792x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efc3b25b-6c07-4005-99b8-2e4122100a2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "r9DZ1guISeKSe8i"
+    }, {
+      "id": "d1c3cd19-5a30-4a09-bfb3-4abd81d717fe",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "8OrOzbsyWyaShi6"
+    }, {
+      "id": "36d9fe00-f62f-4fad-8ff2-c91f946d556a",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "648e0c0b-9f34-446d-9b4b-d6c9bf70dc25",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=span",
+      "targets": [
+        ["css=span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Enter your userName and password correct')]", "xpath:innerText"]
+      ],
+      "value": "Enter your userName and password correct"
+    }]
+  }, {
+    "id": "a70d84da-af2f-41e9-beb4-d0f9676deb31",
+    "name": "SEL001_Empty_credentials",
+    "commands": [{
+      "id": "a8d5474d-0e45-46aa-a97a-3e7af5e45c95",
+      "comment": "",
+      "command": "//Testing with login and password fields empty - should not login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bfe9071-f3aa-4fed-a157-81714408cfc9",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.guru99.com/test/newtours/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "339337a8-d3a2-473a-8954-41f7228ce246",
+      "comment": "",
+      "command": "click",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fc21de7-46e0-4c2a-ada8-616826f2af1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) b",
+      "targets": [
+        ["css=tr:nth-child(2) b", "css:finder"],
+        ["xpath=//tr[2]/td/font/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Password:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecc108ed-1c44-4521-a8f6-8fd274f6cdac",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae33cc73-e09b-4ca5-870a-1632bb4e49b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=form tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=form tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//form/table/tbody/tr/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a081dcfa-c13a-4d5e-bff9-358043f9b414",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "016592bc-9a06-494d-b10a-6a9c54d486cf",
+      "comment": "",
+      "command": "assert",
+      "target": "css=span",
+      "targets": [],
+      "value": "Enter your userName and password correct"
+    }]
+  }, {
+    "id": "575fa553-cd48-4a66-a9b3-f3646a23b572",
+    "name": "SEL003_Empty_login",
+    "commands": [{
+      "id": "960b07d0-1dfb-460c-ac23-908e6d4113ed",
+      "comment": "",
+      "command": "//Testing with empty login and empty password - should not login",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56eb72ce-747f-45f4-9868-e3d3c2b7fc62",
+      "comment": "",
+      "command": "open",
+      "target": "https://demo.guru99.com/test/newtours/login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "762be5f5-a9c0-4ff6-a35a-1b336515f02f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1792x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23812ce4-449f-4645-ab2a-ddbeef0ce6db",
+      "comment": "",
+      "command": "click",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=tr:nth-child(1) > td > input", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "254295a1-6979-4e3a-aeb2-9425115f4259",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "8f620ef3-d7c8-4b27-873f-e3e6f083f6ea",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=td:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b081d893-ea00-437b-ab50-ed3387fca015",
+      "comment": "",
+      "command": "assert",
+      "target": "css=span",
+      "targets": [],
+      "value": "Enter your userName and password correct"
+    }]
+  }],
+  "suites": [{
+    "id": "a3248b4d-dcbd-423d-bde3-2a364b017c2e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["39eac723-afed-492b-9862-e4d0c7ea2b57"]
+  }],
+  "urls": ["https://demo.guru99.com/", "https://demo.guru99.com/test/newtours/login.php"],
+  "plugins": []
+}
